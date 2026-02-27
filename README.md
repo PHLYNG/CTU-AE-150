@@ -1,6 +1,6 @@
 # CTU-Senior-Design
 
-High Altitude Balloon Calibration, Integration, and Testing Guide
+## High Altitude Balloon Calibration, Integration, and Testing Guide
 
 Capitol Technology University (CTU) currently lacks a standardized and formally documented Calibration, Integration, and Testing (CINT) framework for High-Altitude Balloon (HAB) payload development. Although HAB missions have historically been conducted in collaboration with other organizations, CTU does not maintain an internally controlled and repeatable procedural baseline governing payload calibration, subsystem integration, environmental verification, or flight readiness review. As a result, technical consistency across student cohorts depends largely on instructor guidance and informal knowledge transfer rather than documented systems engineering processes.
 
