@@ -9,3 +9,5 @@ The first thing they see is the README. What should it say? It should be a table
 GitHub is a good platform for this because in theory this should also be a living document. Someone could fork this repository, make changes to it, and merge it back in with my approval. Will this actually happen? Probably not. But it would be good for the option to exist. Also, I can access the repository from any computer at any time, so there's no risk that I could lose it like a physical manual.
 
 I should still produce a physical manual, but this repository will be the primary source that is updated.
+
+This is also a good opportunity for me to finally learn and use GitHub.
