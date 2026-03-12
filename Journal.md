@@ -14,3 +14,4 @@ This journal is meant to document anything related to my SD that could be useful
   - began organizing electronics components in the FL in the bin rack to to better understand what we have on hand
 3/12/26
   - soldered BMP388
+  - but I soldered the wrong directions (long pins need to be able to plug into a breadboard)
