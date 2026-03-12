@@ -12,3 +12,5 @@ This journal is meant to document anything related to my SD that could be useful
 
 3/5/26 
   - began organizing electronics components in the FL in the bin rack to to better understand what we have on hand
+3/12/26
+  - soldered BMP388
