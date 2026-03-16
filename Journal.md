@@ -17,6 +17,6 @@ This journal is meant to document anything related to my SD that could be useful
   - soldered BMP388
   - but I soldered the wrong directions (long pins need to be able to plug into a breadboard)
 
-3/1626
+3/16/26
   - soldered BMP388 the right way
   - installed Adafruit libraries on my Arduino IDE
