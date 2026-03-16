@@ -28,4 +28,6 @@ This journal is meant to document anything related to my SD that could be useful
   - sensor appears to be accurate, at least with temperature
   - need to see how i can refine the pressure measurement because the variable is set to sea-level pressure (1013.25 hpa)
   - used arduino uno, connected SDI to A5 and SCK to A4
+  - I2C versus serial
+     - can hook up more sensors using I2C
 <img width="857" height="451" alt="image" src="https://github.com/user-attachments/assets/af209248-20de-4f6c-82e3-432adc92e1a6" />
