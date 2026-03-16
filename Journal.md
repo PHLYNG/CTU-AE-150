@@ -21,5 +21,10 @@ This journal is meant to document anything related to my SD that could be useful
   - soldered BMP388 the right way
   - installed Adafruit libraries on my Arduino IDE
   - wired everything up, but how do i record data?
+     - use the serial monitor in arduino ide to see output
+     - need to make sure that baud rate is set to correct level (the number in serial monitor matches what is written in code)
+     - the demo code had baud rate set as 115200. why was this number selected?
   - used the example code from the library
+  - sensor appears to be accurate, at least with temperature
+  - need to see how i can refine the pressure measurement because the variable is set to sea-level pressure (1013.25 hpa)
 <img width="857" height="451" alt="image" src="https://github.com/user-attachments/assets/af209248-20de-4f6c-82e3-432adc92e1a6" />
