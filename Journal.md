@@ -20,4 +20,6 @@ This journal is meant to document anything related to my SD that could be useful
 3/16/26
   - soldered BMP388 the right way
   - installed Adafruit libraries on my Arduino IDE
+  - wired everything up, but how do i record data?
+  - used the example code from the library
 <img width="857" height="451" alt="image" src="https://github.com/user-attachments/assets/af209248-20de-4f6c-82e3-432adc92e1a6" />
