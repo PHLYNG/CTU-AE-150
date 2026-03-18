@@ -14,3 +14,5 @@ The following are the required components for an introductory HAB payload.
    - Suggested vendor
 4. SD Card and reader
 5. RF Transmitter
+6. BNO055 Absolute Orientation Sensor
+   - [Wiki](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/overview)
