@@ -40,6 +40,13 @@ This journal is meant to document anything related to my SD that could be useful
      - DS3231 Real Time Clock
      - SD Card Adapter
   -  ~i tried funneling each component via breadboard into a single A4 port (for example), but doesn't work~
-  -  i think the thing to do is to configure different ports to act like A4 and A5
+  -  ~i think the thing to do is to configure different ports to act like A4 and A5~
+  -  i did not lay the connectors out properly on the breadboard before, now i have
+  -  i have now successfully initialized each component (not counting the sd card adapter) on the breadboard without having to change the wiring between setups
+  - next challenge is to figure out how to write data to the sd card
+     - start by writing data from one sensor, then add the next, then the next
+     - need to determine what the best format is for data logging
+     - ideally the students take the data and plot it on their own using matlab
   - questions
      - some sensors have different default baud rates - can these all be set to the same baud rate?
+     - initial read is that each sensor can be set to the same baud rate
