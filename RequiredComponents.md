@@ -12,7 +12,7 @@ The following are the required components for an introductory HAB payload.
 3. Custom PCB
    - Schematic
    - Suggested vendor
-4. SD Card and reader
+4. [SD card adapter for Arduino](https://www.amazon.com/HiLetgo-Adater-Interface-Conversion-Arduino/dp/B07BJ2P6X6/?_encoding=UTF8&pd_rd_w=OHJqE&content-id=amzn1.sym.4efc43db-939e-4a80-abaf-50c6a6b8c631%3Aamzn1.symc.5a16118f-86f0-44cd-8e3e-6c5f82df43d0&pf_rd_p=4efc43db-939e-4a80-abaf-50c6a6b8c631&pf_rd_r=4CEJ188Z6PCWCX1342SB&pd_rd_wg=S2nzM&pd_rd_r=4d5d087f-c177-4b30-9b4d-644b5c5d1ddb)
 5. RF Transmitter
 6. BNO055 Absolute Orientation Sensor
    - [Wiki](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/overview)
