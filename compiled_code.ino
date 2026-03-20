@@ -63,7 +63,10 @@ void loop() {
     Serial.println();
     delay(500);
 }
-
+/*
+=================== BNO055 ===================
+based on sensorapi example file
+*/
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
