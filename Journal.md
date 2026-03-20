@@ -31,3 +31,10 @@ This journal is meant to document anything related to my SD that could be useful
   - I2C versus serial
      - can hook up more sensors using I2C
 <img width="857" height="451" alt="image" src="https://github.com/user-attachments/assets/af209248-20de-4f6c-82e3-432adc92e1a6" />
+
+3/20/26
+  -  now trying to hook up 4 different components to a single arduino
+    - BMP085
+    - BNO055
+    - DS3231 Real Time Clock
+    - SD Card Adapter
