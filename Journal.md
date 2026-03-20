@@ -34,7 +34,7 @@ This journal is meant to document anything related to my SD that could be useful
 
 3/20/26
   -  now trying to hook up 4 different components to a single arduino
-    - BMP085
-    - BNO055
-    - DS3231 Real Time Clock
-    - SD Card Adapter
+     - BMP085
+     - BNO055
+     - DS3231 Real Time Clock
+     - SD Card Adapter
