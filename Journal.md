@@ -41,3 +41,5 @@ This journal is meant to document anything related to my SD that could be useful
      - SD Card Adapter
   -  i tried funneling each component via breadboard into a single A4 port (for example), but doesn't work
   -  i think the thing to do is to configure different ports to act like A4 and A5
+  - questions
+     - some sensors have different default baud rates - can these all be set to the same baud rate?
