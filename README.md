@@ -4,7 +4,7 @@
 
 ### Table of Contents
 
-1. Introduction
+1. [Introduction](Introduction.md)
 2. Required Components
 3. Sensor Set Up
 4. Calibration
