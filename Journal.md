@@ -2,6 +2,22 @@ This is another internal file.
 
 This journal is meant to document anything related to my SD that could be useful somehow.
 
+3/25/26
+  - starting to mess with ESP32 board
+
+3/23/26
+  - did a presentation dry run with Volosin
+  - got some great feedback
+  - refined what my 3 payloads will be
+    - measure payload operating environment with little environmental control (ie insulation)
+    - alter payload environment, like with insulation
+    - tweak, finalize, verify chosen parameters
+  - launch one payload during summer (aiming for right after semester ends)
+  - Volosin thinks it's ok to launch remaining two at the start of fall semester (ie don't feel like i need to rush launches over the summer)
+  - i will aim to launch two over the summer and launch third at the start of fall semester
+  - struggled a lot with SD card reader, according to Dan arduino struggles due to small amounts of memory
+  - got Dan's AE150 kicad files and things
+
 3/22/26
   - what are my test payloads going to be?
     - something basic
