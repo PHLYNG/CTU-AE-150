@@ -2,6 +2,15 @@ This is another internal file.
 
 This journal is meant to document anything related to my SD that could be useful somehow.
 
+3/26/26
+  - experimenting with the esp32
+  - found a number of things that students will need for troubleshooting purposes
+  - https://www.youtube.com/watch?v=ZoIgoHZiXFI
+  - this video will help you determine if the device is being recognized at all
+  - if it's not, you will need to install drivers
+  - https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads
+  - the readme has instructions for installing the driver, it's very painless
+
 3/25/26
   - starting to mess with ESP32 board
 
