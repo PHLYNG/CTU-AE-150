@@ -2,6 +2,24 @@ This is another internal file.
 
 This journal is meant to document anything related to my SD that could be useful somehow.
 
+3/27/26
+  - Capturing data every 2 seconds with BMP085 and BNO055 for about 5 minutes = 4.91kb of data
+    - 4.91 * 12 = 58.92 kb per hour
+    - 58.92 * 4 = 235.68 kb for a 4 hour flight
+  - Capturing data every 10 times per second with BMP085 and BNO055 for about 5 minutes = 81.6kb of data
+    - 4.91 * 12 = 979.2 kb per hour
+    - 58.92 * 4 = 3916.8 kb for a 4 hour flight
+  - 1 Mb per hour of data for 2 sensors
+  - even if that number doubles because we have two more sensors, data storage will not be a problem
+  - caution! the previous file will be overwritten as the code currently stands
+  - should i include a hard data logging stop? maybe after 5 hours?
+  - WHAT'S NEXT? WHAT'S LEFT?
+    - still need to add 3 more sensors to this prototype (one more temp, shock, and humidity)
+    - from there, can finalize code
+    - once code is locked in, need to determine physical design where one of the temp sensors is on the outside of the payload
+    - assemble
+    - fly?!
+
 3/26/26
   - experimenting with the esp32
   - found a number of things that students will need for troubleshooting purposes
