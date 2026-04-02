@@ -2,6 +2,12 @@ This is another internal file.
 
 This journal is meant to document anything related to my SD that could be useful somehow.
 
+4/2/26
+- learned from Dan that the BMP085's altitude limit isn't high enough for a 100,000ft flight
+- verified that and found that it's limit is about 30,000ft
+- the correct pressure sensor to use is the [MS5611](https://www.amazon.com/MS5611-01BA03-Precision-Atmospheric-Pressure-arduino/dp/B0DRBP4C2W?crid=O7EVO50W6BZ4&dib=eyJ2IjoiMSJ9.p8sGZe8ZF3H6jYkP3uDNiAB3InW1uAs6KipKdNN-pzkKvhRRAbgPeanAKgsTRrUqNN39JmbuD8R4x8D94Af9tjOGT_lzO1nD-P2Df-NDQtA-joT3RlSH5S1OtoBarvIhFv-RTVxKQsk8mgMUGYiaDhX67ofbeB9KK1IwIvZRo0W3qeuDZ0iY9Mo7ha0HjQPuEURlZqHgOlC7vmwJ5ta-N-QjxQhsE6mGN0iNlJeB2sI.oap_TaDN3J67NxGxiX8cBKnZ63B8ylirwRSBfUN7EsM&dib_tag=se&keywords=ms5611&qid=1775155155&sprefix=ms5611%2Caps%2C169&sr=8-3)
+- for remote sensing, I think i'm just gonna let it ride and see what happens
+
 3/27/26
   - Capturing data every 2 seconds with BMP085 and BNO055 for about 5 minutes = 4.91kb of data
     - 4.91 * 12 = 58.92 kb per hour
