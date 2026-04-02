@@ -1,75 +1,105 @@
 #include <Wire.h>
 #include <SPI.h>
 #include <SD.h>
-#include <Adafruit_Sensor.h>
+#include <RTClib.h>
 #include <Adafruit_BMP085.h>
+#include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
-#include "DFRobot_AirQualitySensor.h"
+#include <DFRobot_AirQualitySensor.h>
 
-// SD Card Pin
-#define SD_CS 5
+const int chipSelect = 5;
+char filename[20]; 
 
-// Standard Sea Level Pressure (1013.25 hPa = 101325 Pa)
-// For better accuracy, look up the current "Altimeter Setting" for Baltimore
-#define SEA_LEVEL_PRESSURE 101325 
+// This will store the pressure at your launch site
+float launchPadPressure; 
 
+RTC_DS3231 rtc;
 Adafruit_BMP085 bmp;
-Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);
-DFRobot_AirQualitySensor particle(&Wire, 0x19);
+Adafruit_BNO055 bno = Adafruit_BNO055(55);
+DFRobot_AirQualitySensor airQuality(&Wire);
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin(21, 22);
+  Wire.begin();
+  delay(1000); 
 
-  if (!bmp.begin(0x77)) { Serial.println("BMP085 missing!"); }
-  if (!bno.begin()) { Serial.println("BNO055 missing!"); while (1); }
-  while (particle.begin() != 0) { Serial.println("SEN0460 missing!"); delay(1000); }
-  if (!SD.begin(SD_CS)) { Serial.println("SD failed!"); while (1); }
+  Serial.println("\n--- HAB PAYLOAD INITIALIZATION ---");
 
-  // Updated CSV header with Pressure and Altitude
-  File dataFile = SD.open("/data.csv", FILE_WRITE);
-  if (dataFile) {
-    dataFile.println("Time_ms,Temp_C,Pressure_Pa,Altitude_m,Heading,Pitch,Roll,PM1_0,PM2_5,PM10");
-    dataFile.close();
-    Serial.println("Header initialized.");
+  if (!SD.begin(chipSelect)) {
+    Serial.println("CRITICAL FAIL: SD Card");
+    while (1); 
   }
 
-  bno.setExtCrystalUse(true);
+  // Filename Auto-Increment
+  int fileCount = 0;
+  sprintf(filename, "/log%d.csv", fileCount);
+  while (SD.exists(filename)) {
+    fileCount++;
+    sprintf(filename, "/log%d.csv", fileCount);
+  }
+
+  if (!rtc.begin()) Serial.println("FAIL: RTC");
+  // rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); // Uncomment to sync once
+
+  if (!bmp.begin()) {
+    Serial.println("FAIL: BMP085");
+  } else {
+    // --- CALIBRATION STEP ---
+    // Take 5 readings and average them to get a stable "Ground Zero" pressure
+    float totalP = 0;
+    for(int i=0; i<5; i++) {
+      totalP += bmp.readPressure();
+      delay(100);
+    }
+    launchPadPressure = totalP / 5.0;
+    Serial.print("PASS: BMP085 Calibrated. Ground Pressure: "); 
+    Serial.print(launchPadPressure); Serial.println(" Pa");
+  }
+
+  if (!bno.begin()) Serial.println("FAIL: BNO055");
+  if (!airQuality.begin()) Serial.println("FAIL: SEN0460");
+
+  File dataFile = SD.open(filename, FILE_WRITE);
+  if (dataFile) {
+    dataFile.println("Year,Month,Day,Hour,Min,Sec,Temp_C,Press_Pa,Alt_AGL_m,Yaw,Pitch,Roll,PM2_5_ug,PM10_ug,Count_2_5_to_10");
+    dataFile.close();
+  }
+  
+  Serial.println("--- LOGGING AGL ALTITUDE ---");
 }
 
 void loop() {
+  DateTime now = rtc.now();
+
+  float temp = bmp.readTemperature();
+  int32_t pressure = bmp.readPressure();
+  
+  // Calculate altitude relative to your specific launch site
+  float altitudeAGL = bmp.readAltitude(launchPadPressure);
+
   sensors_event_t event;
   bno.getEvent(&event);
 
-  unsigned long now = millis();
-  float temp = bmp.readTemperature();
-  float pressure = bmp.readPressure(); // Pressure in Pascals
-  float altitude = bmp.readAltitude(SEA_LEVEL_PRESSURE); // Altitude in Meters
+  uint16_t pm25_conc = airQuality.gainParticleConcentration_ugm3(PARTICLE_PM2_5_STANDARD);
+  uint16_t pm10_conc = airQuality.gainParticleConcentration_ugm3(PARTICLE_PM10_STANDARD);
+  
+  uint16_t gt2_5 = airQuality.gainParticleNum_Every0_1L(PARTICLENUM_2_5_UM_EVERY0_1L_AIR);
+  uint16_t gt10  = airQuality.gainParticleNum_Every0_1L(PARTICLENUM_10_UM_EVERY0_1L_AIR);
+  uint16_t count_2_5_to_10 = (gt2_5 > gt10) ? (gt2_5 - gt10) : 0;
 
-  uint16_t pm1_0 = particle.gainParticleConcentration_ugm3(PARTICLE_PM1_0_STANDARD);
-  uint16_t pm2_5 = particle.gainParticleConcentration_ugm3(PARTICLE_PM2_5_STANDARD);
-  uint16_t pm10  = particle.gainParticleConcentration_ugm3(PARTICLE_PM10_STANDARD);
-
-  // Build the expanded data string
-  String dataString = String(now) + "," + 
-                      String(temp) + "," + 
-                      String(pressure) + "," + 
-                      String(altitude) + "," + 
-                      String(event.orientation.x) + "," + 
-                      String(event.orientation.y) + "," + 
-                      String(event.orientation.z) + "," +
-                      String(pm1_0) + "," +
-                      String(pm2_5) + "," +
-                      String(pm10);
-
-  File dataFile = SD.open("/data.csv", FILE_APPEND);
+  File dataFile = SD.open(filename, FILE_APPEND);
   if (dataFile) {
-    dataFile.println(dataString);
+    dataFile.printf("%d,%d,%d,%d,%d,%d,", now.year(), now.month(), now.day(), now.hour(), now.minute(), now.second());
+    dataFile.printf("%.2f,%ld,%.2f,%.2f,%.2f,%.2f,%d,%d,%d\n", 
+                    temp, pressure, altitudeAGL, event.orientation.x, event.orientation.y, event.orientation.z, 
+                    pm25_conc, pm10_conc, count_2_5_to_10);
     dataFile.close();
-    Serial.println(dataString); 
-  } else {
-    Serial.println("SD Error!");
   }
 
-  delay(200); 
+  // --- FULL DEBUG OUTPUT ---
+  Serial.print(now.timestamp(DateTime::TIMESTAMP_TIME));
+  Serial.printf(" | Alt: %.1fm | Temp: %.1fC | P: %ldPa | YPR: %.1f,%.1f,%.1f | PM10: %d\n", 
+                altitudeAGL, temp, pressure, event.orientation.x, event.orientation.y, event.orientation.z, pm10_conc);
+
+  delay(2000); 
 }
