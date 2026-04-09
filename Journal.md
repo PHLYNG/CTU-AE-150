@@ -2,6 +2,15 @@ This is another internal file.
 
 This journal is meant to document anything related to my SD that could be useful somehow.
 
+4/9/2026
+
+- for remote sensing, i edited the code so that if one of the sensors craps out or otherwise stops logging data, it doesn't prevent the remaining sensors from logging data (this is to primarily work around the BMP085 most likely failing at a certain point in ascent)
+- i was going to solder everything into a perf board, but i simply did not have the time to learn how to solder into a perfboard and do it well in time for the flight
+- i will focus on this for senior design instead
+- [good video with tips on soldering stuff into a perf board](https://www.youtube.com/watch?v=l9Kbr8cPqOE)
+- for remote sensing, i figured out a way to glue the jumper cables into the breadboard while taping down anything that i could (to avoid gluing)
+- i was torn on gluing the cables to the ESP32 pins. i glued down 3 cables in the end, but left the rest unglued
+
 4/2/26
 - learned from Dan that the BMP085's altitude limit isn't high enough for a 100,000ft flight
 - verified that and found that it's limit is about 30,000ft
