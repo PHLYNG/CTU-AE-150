@@ -2,6 +2,13 @@ This is another internal file.
 
 This journal is meant to document anything related to my SD that could be useful somehow.
 
+5/4/2026
+
+- [another perf board video with some good tips](https://www.youtube.com/watch?v=a3wDEcORRR4)
+- don't solder microcontroller directly into perf board
+- i like how we housed the ESP32 for remote sensing, could use male to female wires and then solder the male pins to the perf board
+- [there's perf board that mimics bread board](https://a.co/d/06dvdpob)
+
 4/9/2026
 
 - for remote sensing, i edited the code so that if one of the sensors craps out or otherwise stops logging data, it doesn't prevent the remaining sensors from logging data (this is to primarily work around the BMP085 most likely failing at a certain point in ascent)
@@ -14,7 +21,7 @@ This journal is meant to document anything related to my SD that could be useful
 4/2/26
 - learned from Dan that the BMP085's altitude limit isn't high enough for a 100,000ft flight
 - verified that and found that it's limit is about 30,000ft
-- the correct pressure sensor to use is the [MS5611](https://www.amazon.com/MS5611-01BA03-Precision-Atmospheric-Pressure-arduino/dp/B0DRBP4C2W?crid=O7EVO50W6BZ4&dib=eyJ2IjoiMSJ9.p8sGZe8ZF3H6jYkP3uDNiAB3InW1uAs6KipKdNN-pzkKvhRRAbgPeanAKgsTRrUqNN39JmbuD8R4x8D94Af9tjOGT_lzO1nD-P2Df-NDQtA-joT3RlSH5S1OtoBarvIhFv-RTVxKQsk8mgMUGYiaDhX67ofbeB9KK1IwIvZRo0W3qeuDZ0iY9Mo7ha0HjQPuEURlZqHgOlC7vmwJ5ta-N-QjxQhsE6mGN0iNlJeB2sI.oap_TaDN3J67NxGxiX8cBKnZ63B8ylirwRSBfUN7EsM&dib_tag=se&keywords=ms5611&qid=1775155155&sprefix=ms5611%2Caps%2C169&sr=8-3)
+- the correct pressure sensor to use is the [MS5611](https://a.co/d/08R3yWdN)
 - for remote sensing, I think i'm just gonna let it ride and see what happens
 - 5 sensors is too many to breadboard (physical space limitation)
 
