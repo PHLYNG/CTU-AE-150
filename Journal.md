@@ -8,7 +8,7 @@ This journal is meant to document anything related to my SD that could be useful
 - lots of improvement, but also running into lots of walls
 - finally realized that i'm not practicing what i'm going to be preaching and need to be more incremental about how i'm doing stuff
 - made some errors in terms of soldering parts directly to boards rather than using pin headers
-- prototyping (and making sure the sensors work) the humidity sensor and accelerometer on a breadboard
+- prototyping (and making sure the sensors work) the humidity sensor (AHT20) and accelerometer (ADXL345) on a breadboard
 
 5/4/2026
 
