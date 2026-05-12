@@ -2,7 +2,20 @@ This is another internal file.
 
 This journal is meant to document anything related to my SD that could be useful somehow.
 
+5/12/2026
+
+- i've been doing a lot of soldering these past few days
+- lots of improvement, but also running into lots of walls
+- finally realized that i'm not practicing what i'm going to be preaching and need to be more incremental about how i'm doing stuff
+- made some errors in terms of soldering parts directly to boards rather than using pin headers
+- prototyping (and making sure the sensors work) the humidity sensor and accelerometer on a breadboard
+
 5/4/2026
+
+- met with Adrian Flores at HUBC to show him my senior design presentation
+- he's very open to flying my payloads and likes the github idea
+
+5/4/2026 - this date might be incorrect
 
 - [another perf board video with some good tips](https://www.youtube.com/watch?v=a3wDEcORRR4)
 - don't solder microcontroller directly into perf board
