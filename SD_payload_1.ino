@@ -32,7 +32,7 @@ void setup() {
   Wire.setTimeOut(50); // Prevent I2C lockups
 
   // 1. RTC SYNC
-  if (rtc.begin()) {
+    if (rtc.begin()) {
     rtcOk = true;
     if (rtc.lostPower()) rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
     Serial.println("[OK] RTC Online");
@@ -54,8 +54,6 @@ void setup() {
   Serial.printf("File: %s\n", filename);
 
   // 3. SENSOR INIT & CALIBRATION
-  
-  // AHT20 Init
   if (aht.begin()) {
     ahtOk = true;
     Serial.println("[OK] AHT20 Online");
@@ -63,23 +61,19 @@ void setup() {
     Serial.println("[FAIL] AHT20 Offline");
   }
 
-  // ADXL345 Init
   if (accel.begin()) {
     accelOk = true;
-    accel.setRange(ADXL345_RANGE_16_G); // Best for high dynamic environments like launches
+    accel.setRange(ADXL345_RANGE_16_G); // Best for high dynamic environments
     Serial.println("[OK] ADXL345 Online");
   } else {
     Serial.println("[FAIL] ADXL345 Offline");
   }
 
-  // MS5611 Init & Calibration
   if (ms5611.begin()) {
     msOk = true;
     float totalP = 0;
-    // Take average of 5 readings to establish ground baseline
     for(int i = 0; i < 5; i++) { 
       ms5611.read();
-      // ms5611.getPressure() returns millibar (mbar). Multiply by 100 for Pascals.
       totalP += (ms5611.getPressure() * 100.0); 
       delay(50); 
     }
@@ -98,17 +92,19 @@ void setup() {
 }
 
 void loop() {
-  // --- A. ENVIRONMENTAL DATA (AHT20) ---
-  float temp = -999, humidity = -999;
+  // Declare variables at the top of the loop so the logger can see them all
+  float temp = -999, humidity = -999, press = 0, alt = -999;
+  float ax = 0, ay = 0, az = 0;
+  String timeStr = "00:00:00";
+
+  // --- A. HUMIDITY ONLY (AHT20) ---
   if (ahtOk) {
     sensors_event_t aht_humidity, aht_temp;
-    aht.getEvent(&aht_humidity, &aht_temp);
-    temp = aht_temp.temperature;
+    aht.getEvent(&aht_humidity, &aht_temp); 
     humidity = aht_humidity.relative_humidity;
   }
 
   // --- B. KINEMATIC DATA (ADXL345) ---
-  float ax = 0, ay = 0, az = 0;
   if (accelOk) {
     sensors_event_t event;
     accel.getEvent(&event);
@@ -117,20 +113,18 @@ void loop() {
     az = event.acceleration.z;
   }
 
-  // --- C. PRESSURE & ALTITUDE (MS5611) ---
-  float press = 0, alt = -999;
+  // --- C. PRESSURE, ALTITUDE, & TEMPERATURE (MS5611) ---
   if (msOk) {
-    ms5611.read();
-    press = ms5611.getPressure() * 100.0; // Convert mbar to Pa
+    ms5611.read(); 
+    temp = ms5611.getTemperature(); 
+    press = ms5611.getPressure() * 100.0; 
     
-    // Standard barometric formula for altitude based on launchpad baseline
     if (launchPadPressure > 0) {
       alt = 44330.0 * (1.0 - pow(press / launchPadPressure, 0.1903));
     }
   }
 
   // --- D. TIME ---
-  String timeStr = "00:00:00";
   if (rtcOk) {
     DateTime now = rtc.now();
     char buf[10];
@@ -144,7 +138,7 @@ void loop() {
                     String(press) + "," + String(alt) + "," +
                     String(ax) + "," + String(ay) + "," + String(az);
 
-  File dataFile = SD.open(filename, FILE_APPEND); // Note: Older SD libs use FILE_WRITE. Using FILE_APPEND as requested in your snippet.
+  File dataFile = SD.open(filename, FILE_APPEND); 
   if (dataFile) {
     dataFile.println(dataLine);
     dataFile.close();
@@ -153,5 +147,5 @@ void loop() {
     Serial.println("!! SD ERROR !!");
   }
 
-  delay(2000);
+  delay(250);
 }
