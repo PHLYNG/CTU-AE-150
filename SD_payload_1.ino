@@ -1,3 +1,4 @@
+#include <sys/time.h>
 #include <Wire.h>
 #include <SPI.h>
 #include <SD.h>
@@ -32,9 +33,21 @@ void setup() {
   Wire.setTimeOut(50); // Prevent I2C lockups
 
   // 1. RTC SYNC
-    if (rtc.begin()) {
+  if (rtc.begin()) {
     rtcOk = true;
-    if (rtc.lostPower()) rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    
+    if (rtc.lostPower()) {
+      rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    }
+    
+    // --- SYNC ESP32 INTERNAL CLOCK TO RTC ---
+    DateTime now = rtc.now();
+    struct timeval tv;
+    tv.tv_sec = now.unixtime();
+    tv.tv_usec = 0;
+    settimeofday(&tv, NULL);
+    // --------------------------------------------
+    
     Serial.println("[OK] RTC Online");
   } else {
     Serial.println("[FAIL] RTC Offline");
@@ -83,24 +96,25 @@ void setup() {
     Serial.println("[FAIL] MS5611 Offline");
   }
 
-  // 4. HEADER WRITING
+  // 4. HEADER WRITING (Updated with both temperatures)
   File dataFile = SD.open(filename, FILE_WRITE);
   if (dataFile) {
-    dataFile.println("Millis,Time,Temp_C,Humidity_%,Press_Pa,Alt_m,AccelX_ms2,AccelY_ms2,AccelZ_ms2");
+    dataFile.println("Millis,Time,TempAHT_C,TempMS_C,Humidity_%,Press_Pa,Alt_m,AccelX_ms2,AccelY_ms2,AccelZ_ms2");
     dataFile.close();
   }
 }
 
 void loop() {
-  // Declare variables at the top of the loop so the logger can see them all
-  float temp = -999, humidity = -999, press = 0, alt = -999;
+  // Added separate variables for both temperatures
+  float tempAHT = -999, tempMS = -999, humidity = -999, press = 0, alt = -999;
   float ax = 0, ay = 0, az = 0;
   String timeStr = "00:00:00";
 
-  // --- A. HUMIDITY ONLY (AHT20) ---
+  // --- A. HUMIDITY & TEMPERATURE (AHT20) ---
   if (ahtOk) {
     sensors_event_t aht_humidity, aht_temp;
     aht.getEvent(&aht_humidity, &aht_temp); 
+    tempAHT = aht_temp.temperature; // Now actively saving the AHT temp
     humidity = aht_humidity.relative_humidity;
   }
 
@@ -116,7 +130,7 @@ void loop() {
   // --- C. PRESSURE, ALTITUDE, & TEMPERATURE (MS5611) ---
   if (msOk) {
     ms5611.read(); 
-    temp = ms5611.getTemperature(); 
+    tempMS = ms5611.getTemperature(); // Saving the MS5611 temp
     press = ms5611.getPressure() * 100.0; 
     
     if (launchPadPressure > 0) {
@@ -132,10 +146,10 @@ void loop() {
     timeStr = String(buf);
   }
 
-  // --- E. LOGGING ---
+  // --- E. LOGGING (Updated with both variables) ---
   String dataLine = String(millis()) + "," + timeStr + "," + 
-                    String(temp) + "," + String(humidity) + "," + 
-                    String(press) + "," + String(alt) + "," +
+                    String(tempAHT) + "," + String(tempMS) + "," + 
+                    String(humidity) + "," + String(press) + "," + String(alt) + "," +
                     String(ax) + "," + String(ay) + "," + String(az);
 
   File dataFile = SD.open(filename, FILE_APPEND); 
@@ -147,5 +161,5 @@ void loop() {
     Serial.println("!! SD ERROR !!");
   }
 
-  delay(250);
+  delay(500);
 }
