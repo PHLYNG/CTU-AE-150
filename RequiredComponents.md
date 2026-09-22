@@ -1,4 +1,4 @@
-# Required Components
+# Materials
 
 The following are the required components for an introductory HAB payload.
 
