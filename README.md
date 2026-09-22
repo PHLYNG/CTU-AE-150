@@ -6,7 +6,7 @@
 
 1. [Introduction](Introduction.md)
 2. Designing a Payload
-3. Materials
+3. [Materials](Materials.md)
 4. Microcontroller
 5. Sensor Package
 6. Circuit Schematic
