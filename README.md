@@ -7,9 +7,9 @@
 ### Table of Contents
 
 1. [Introduction](Introduction.md)
-2. Designing a Payload
+2. [Designing a Payload](Designing_Payload.md)
 3. [Materials](Materials.md)
-4. Microcontroller
+4. [Command & Data Handling](Microcontroller.md)
 5. Sensor Package
 6. Circuit Schematic
 7. Prototyping
