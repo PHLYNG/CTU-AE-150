@@ -15,3 +15,4 @@
 9. Testing
 10. Flight
 11. [HAB Tracker](HAB_Tracker.md)
+12. [GitHub Assets](GitHub_Assets.md)
