@@ -10,7 +10,7 @@
 2. [Designing a Payload](Designing_Payload.md)
 3. [Materials](Materials.md)
 4. [Command & Data Handling](Microcontroller.md)
-5. Sensor Package
+5. [Sensor Package](Sensor_Package.md)
 6. Circuit Schematic
 7. Prototyping
 8. Soldering
