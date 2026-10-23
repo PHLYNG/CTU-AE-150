@@ -10,10 +10,10 @@
 2. [Designing a Payload](Designing_Payload.md)
 3. [Materials](Materials.md)
 4. [Command & Data Handling](Microcontroller.md)
-5. [Sensor Package](Sensor_Package.md)
-6. Circuit Schematic
-7. Prototyping
-8. Soldering
-9. Testing
-10. Flight
-11. [HAB Tracker](HAB_Tracker.md)
+5. Soldering
+6. [Sensor Package](Sensor_Package.md)
+7. Calibration
+8. Prototyping
+10. Testing
+11. Flight
+12. [HAB Tracker](HAB_Tracker.md)
