@@ -18,7 +18,9 @@ To setup the ESP32, follow the instructions below:
 
    ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/6acf5c7a29f375a35f7b22e94a33aef4772e322f/images/Screenshot%202026-10-08%20163729.png)
 7. In the top left of the newly opened window, click into the search bar and search "ESP32"
-8. Install both libraries by Arduino and Espressif Systems
+
+   ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/77fea9497a12ade1bd98f81b4cc51e11e86cf043/images/Screenshot%202026-10-08%20163759.png)
+9. Install both libraries by Arduino and Espressif Systems
     1. This installation process will take a few minutes
-9. In the main Arduino IDE window, select the "Select Board" box
-10. In the search bar, search for and select "ESP32 DOIT DevKit"
+10. In the main Arduino IDE window, select the "Select Board" box
+11. In the search bar, search for and select "ESP32 DOIT DevKit"
