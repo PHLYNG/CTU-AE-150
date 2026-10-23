@@ -12,6 +12,6 @@ To setup the ESP32, follow the instructions below:
   2. MacOS - download CP210x VCP Mac OSX Driver
 3. Extract driver file
 4. In the extracted driver file, right click the file titled “silabser” and select install
-  1. The file may have an extension “.inf” or you might see a column in your file manager where         the file type is “setup information”
-  2. If you have further trouble, the driver file will have a text file with detailed instructions
+    1. The file may have an extension “.inf” or you might see a column in your file manager where         the file type is “setup information”
+    2. If you have further trouble, the driver file will have a text file with detailed                   instructions
 5. In Arduino IDE, at the top left select “Tools,” then select “Boards,” then select “Boards Manager”
