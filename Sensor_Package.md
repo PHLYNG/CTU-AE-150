@@ -3,14 +3,38 @@
 The sensor package for this payload are basic but they are, either altogether or some combination of, the foundation of any complex payload project you might create later on.
 
 1. [Real Time Clock - DS3231](https://a.co/d/0bGsMs1b)
-2. [Temperature and Pressure - GY-63](https://a.co/d/01ImdkOY)
+2. [Temperature and Pressure - MS5611](https://a.co/d/01ImdkOY)
 3. [Inertial Measurement Unit - GY-521](https://a.co/d/0gLBPZdt)
 4. [SD Card Reader](https://a.co/d/002QuOu7)
 
 If all you fly in your payload was this sensor package, you would still learn a lot.
 
-The Real Time Clock (RTC) and GY-63 both are a means of correlating scientific data your payload might be collecting. For example, x seconds into the flight, y data was collected. Alternatively you could say at x altitude (determined by converting pressure readings), y data was collected.
+The Real Time Clock (RTC) and MS5611 both are a means of correlating scientific data your payload might be collecting. For example, x seconds into the flight, y data was collected. Alternatively you could say at x altitude (determined by converting pressure readings), y data was collected.
 
 The Inertial Measurement Unit (IMU) can tell you how your payload is oriented throughout the flight. That could be important if you have a sensor that requires an orientation that is perpendicular to the Earth's surface as the payload is rising.
 
 ![img alt](https://github.com/PHLYNG/CTU-AE-150/blob/f84b2b25b0527a2344d09eb8b14be9175b818866/images/Screenshot%202026-10-23%20145406.png)
+
+Before getting fully underway with prototyping, a good first step is to connect each individual sensor to the ESP32 and run sample code to ensure that your sensors are functioning.
+
+After following the steps in the Command & Data Handling section of this Manual and while the ESP32 is connected to your computer, follow these steps to test your sensors one by one. This Manual will proceed with the MS5611 as an example, but the steps will be the same for the other sensors.
+
+  1. Connect a jumper cable to the 3.3V pin on the ESP32 and then connect the other end to the VCC pin on the sensor
+  2. Connect a jumper cable to the GND pin on the ESP32 and then connect the other end to the GND pin on the sensor
+      1. It is good practice to use red for power and black for ground
+  4. Connect a jumper cable to the *** pin on the ESP32 and then connect the other end to the *** pin on the sensor
+  5. Connect a jumper cable to the *** pin on the ESP32 and then connect the other end to the *** pin on the sensor
+      1. [insert a picture of a single sensor connected to the ESP32] 
+  7. In the Arduino IDE, select the Library Manager icon
+      1. [insert screenshot of IDE]
+  9. In the search bar that appears, search for the sensor that you have connected to your ESP32
+  10. From the results, choose an official library (Adafruit, Sparkfun, Arduino, etc) if available
+      1. If an official library is not available, feel free to search the internet for which library might be the best for your particular option
+      2. Otherwise, choosing the first available option should suffice
+      3. [insert screenshot of IDE]
+  11. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select
+  12. [Need to go through this process myself to get the sequencing correct]
+
+If the sensor is working properly, you will see data populating the Arduino IDE console.
+
+In order to ensure that the data being produced is correct we must calibrate our sensors, which will be discussed in the following section.
