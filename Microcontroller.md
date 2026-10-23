@@ -6,7 +6,7 @@ This Manual uses an ESP32 rather than an Arduino as the MCU of choice for CDH fu
 
 To setup the ESP32, follow the instructions below:
 
-1. Download Arduino IDE, go through installation process
+1. [Download Arduino IDE](https://www.arduino.cc/en/software/), go through installation process
 2. Download driver
   1. Windows - download CP210x Universal Windows Driver
   2. MacOS - download CP210x VCP Mac OSX Driver
