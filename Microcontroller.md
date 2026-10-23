@@ -16,7 +16,7 @@ To setup the ESP32, follow the instructions below:
     2. If you have further trouble, the driver file will have a text file with detailed                   instructions
 5. In Arduino IDE, at the top left select “Tools,” then select “Boards,” then select “Boards Manager”
 
-   ![Alt text](images/Screenshot 2026-10-08 163729.png)
+   ![image alt]([images/Screenshot 2026-10-08 163729.png](https://github.com/PHLYNG/CTU-AE-150/blob/6acf5c7a29f375a35f7b22e94a33aef4772e322f/images/Screenshot%202026-10-08%20163729.png))
 7. In the top left of the newly opened window, click into the search bar and search "ESP32"
 8. Install both libraries by Arduino and Espressif Systems
     1. This installation process will take a few minutes
