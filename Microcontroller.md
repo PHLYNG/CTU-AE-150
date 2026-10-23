@@ -15,7 +15,7 @@ To setup the ESP32, follow the instructions below:
     1. The file may have an extension “.inf” or you might see a column in your file manager where         the file type is “setup information”
     2. If you have further trouble, the driver file will have a text file with detailed                   instructions
 5. In Arduino IDE, at the top left select “Tools,” then select “Boards,” then select “Boards Manager”
-   [!Alt text](images/Screenshot 2026-10-08 163729)
+   ![Alt text](images/Screenshot 2026-10-08 163729)
 7. In the top left of the newly opened window, click into the search bar and search "ESP32"
 8. Install both libraries by Arduino and Espressif Systems
     1. This installation process will take a few minutes
