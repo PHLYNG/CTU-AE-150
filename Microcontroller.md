@@ -4,6 +4,8 @@ A microcontroller unit (MCU) functions as a compact, self-contained computer fab
 
 This Manual uses an ESP32 rather than an Arduino as the MCU of choice for CDH functions. The ESP32 is a more powerful device that costs only slightly more (if not about the same) as an Arduino unit. At the same time, the user can program an ESP32 with an Arduino IDE using the same Arduino libraries for the sensor package.
 
+  [insert close up images of ESP32]
+
 To setup the ESP32, follow the instructions below:
 
 1. [Download Arduino IDE](https://www.arduino.cc/en/software/), go through installation process
@@ -24,3 +26,5 @@ To setup the ESP32, follow the instructions below:
     1. This installation process will take a few minutes
 10. In the main Arduino IDE window, select the "Select Board" box
 11. In the search bar, search for and select "ESP32 DOIT DevKit"
+
+    [insert image of ESP32 board selection window]
