@@ -13,3 +13,4 @@ The Real Time Clock (RTC) and GY-63 both are a means of correlating scientific d
 
 The Inertial Measurement Unit (IMU) can tell you how your payload is oriented throughout the flight. That could be important if you have a sensor that requires an orientation that is perpendicular to the Earth's surface as the payload is rising.
 
+![img alt](https://github.com/PHLYNG/CTU-AE-150/blob/f84b2b25b0527a2344d09eb8b14be9175b818866/images/Screenshot%202026-10-23%20145406.png)
