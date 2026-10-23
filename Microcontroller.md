@@ -7,7 +7,7 @@ This Manual uses an ESP32 rather than an Arduino as the MCU of choice for CDH fu
 To setup the ESP32, follow the instructions below:
 
 1. [Download Arduino IDE](https://www.arduino.cc/en/software/), go through installation process
-2. Download driver
+2. [Download driver](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
   1. Windows - download CP210x Universal Windows Driver
   2. MacOS - download CP210x VCP Mac OSX Driver
 3. Extract driver file
@@ -15,3 +15,8 @@ To setup the ESP32, follow the instructions below:
     1. The file may have an extension “.inf” or you might see a column in your file manager where         the file type is “setup information”
     2. If you have further trouble, the driver file will have a text file with detailed                   instructions
 5. In Arduino IDE, at the top left select “Tools,” then select “Boards,” then select “Boards Manager”
+6. In the top left of the newly opened window, click into the search bar and search "ESP32"
+7. Install both libraries by Arduino and Espressif Systems
+    1. This installation process will take a few minutes
+8. In the main Arduino IDE window, select the "Select Board" box
+9. In the search bar, search for and select "ESP32 DOIT DevKit"
