@@ -4,7 +4,7 @@ A microcontroller unit (MCU) functions as a compact, self-contained computer fab
 
 This Manual uses an ESP32 rather than an Arduino as the MCU of choice for CDH functions. The ESP32 is a more powerful device that costs only slightly more (if not about the same) as an Arduino unit. At the same time, the user can program an ESP32 with an Arduino IDE using the same Arduino libraries for the sensor package.
 
-  [insert close up images of ESP32]
+  ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/3c44d6c381834538819a3806c4304dc34bd8db5d/images/esp32%20pinout.jpg)
 
 To setup the ESP32, follow the instructions below:
 
