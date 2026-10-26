@@ -26,6 +26,9 @@ To setup the ESP32, follow the instructions below:
     1. This installation process will take a few minutes
 10. At this point, make sure your ESP32 is plugged in to your computer
 11. In the main Arduino IDE window, select the "Select Board" box
-12. In the search bar, search for and select "ESP32 DOIT DevKit"
+    ![image alt](
+13. In the search bar, search for and select "ESP32 DOIT DevKit" (the correct COM port should automatically be selected)
 
-    [insert image of ESP32 board selection window]
+    ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/b00f86b29cd741b76f62bf935e3a95e97742a8c6/images/esp32%20adruino%20ide%20selection.png)
+
+You are now ready to upload code to your ESP32! To run some test code on your sensors to make sure they work, go to the Sensor Package section.
