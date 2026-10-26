@@ -4,7 +4,8 @@ Every successful aerospace mission begins not with soldering irons or raw code, 
 
 ## 1. Requirements Drive Design
 
-Before writing requirements, start by stepping back and examining your goals and physical boundaries:   
+Before writing requirements, start by stepping back and examining your goals and physical boundaries:
+
 1. What is the payload’s objective? Ask yourself what primary questions your mission will answer. High-altitude balloons carry payloads to the edge of space, but the scientific or operational focus dictates every subsystem you choose. Your scientific or engineering objective establishes your functional and performance requirements—defining exactly what tasks the hardware must execute and how accurately it must measure. Below are some examples of payload projects to think about:
    - Atmospheric Characterization: Are you measuring vertical temperature gradients, pressure decay, or humidity profiles as you ascend through the troposphere and stratosphere?
    - Visual Imagery: Are you capturing wide-angle video or high-resolution stills of the curvature of the Earth and the blackness of space?
@@ -19,3 +20,7 @@ Before writing requirements, start by stepping back and examining your goals and
 If you have ambitious ideas, such as multi-spectral cameras, actuated cut-down mechanisms, or long-range transceivers, that is the ultimate goal. However, jumping straight into complex systems often leads to integration errors and unrecoverable failures.
 
 The purpose of this manual is to give you, the user, a workflow that will build a simple yet foundational payload. It teaches you the core building blocks: power budgeting, microcontroller integration, sensor polling, and data storage that serve as the baseline architecture for any advanced scientific instrument you design in the future. Rather than attempting to do everything at once, this foundational test payload focuses on mastering the essentials: reliably surviving the flight environment, tracking time, and logging clean environmental data.
+
+## 3. Baseline Requirements Table
+
+
