@@ -10,9 +10,10 @@ Before writing requirements, start by stepping back and examining your goals and
    - Visual Imagery: Are you capturing wide-angle video or high-resolution stills of the curvature of the Earth and the blackness of space?
    - Remote Sensing & Experiments: Are you testing solar panel degradation, radiation exposure, or custom RF transmitters?
 2. No payload flies in isolation. Flight providers, balloon launch operators, and aviation authorities define constraints that your system cannot violate.
-  - Mass Ceilings: Balloon ascent profiles and aviation regulations (such as FAA FAR Part 101 limits) place strict mass caps on individual packages (often requiring payloads to remain well under 6 lbs).
-  - Form Factor & Dimensions: Payloads must fit neatly along the flight string without swinging wildly or interfering with the parachute and rigging line.
-  - Environmental Tolerance: Near-space conditions subject payloads to extreme cold down to -60 degrees Celsius, near-vacuum atmospheric pressures, and landing impact shocks.
+   - Mass Ceilings: Balloon ascent profiles and aviation regulations (such as FAA FAR Part 101 limits) place strict mass caps on individual packages (often requiring payloads to remain well under 6 lbs).
+   - Form Factor & Dimensions: Payloads must fit neatly along the flight string without swinging wildly or interfering with the parachute and rigging line.
+   - Environmental Tolerance: Near-space conditions subject payloads to extreme cold down to -60 degrees Celsius, near-vacuum atmospheric pressures, and landing impact shocks.
+
 ## 2. The Foundational Payload Architecture
 
 If you have ambitious ideas, such as multi-spectral cameras, actuated cut-down mechanisms, or long-range transceivers, that is the ultimate goal. However, jumping straight into complex systems often leads to integration errors and unrecoverable failures.
