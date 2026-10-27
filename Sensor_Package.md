@@ -17,13 +17,14 @@ The Inertial Measurement Unit (IMU) can tell you how your payload is oriented th
 
 Before getting fully underway with prototyping, a good first step is to connect each individual sensor to the ESP32 and run sample code to ensure that your sensors are functioning.
 
-After following the steps in the Command & Data Handling section of this Manual and while the ESP32 is connected to your computer, follow these steps to test your sensors one by one. This Manual will proceed with the MS5611 as an example, but the steps will be the same for the other sensors.
+After following the steps in the Command & Data Handling section of this Manual and while the ESP32 is connected to your computer, follow these steps to test your sensors one by one. This Manual will proceed with the RTC as an example, but the steps will be the same for the other sensors.
 
   1. Connect a jumper cable to the 3.3V pin on the ESP32 and then connect the other end to the VCC pin on the sensor
   2. Connect a jumper cable to the GND pin on the ESP32 and then connect the other end to the GND pin on the sensor
       1. It is good practice to use red for power and black for ground
-  4. Connect a jumper cable to the *** pin on the ESP32 and then connect the other end to the *** pin on the sensor
-  5. Connect a jumper cable to the *** pin on the ESP32 and then connect the other end to the *** pin on the sensor
+  4. Connect a jumper cable to the 22 pin on the ESP32 and then connect the other end to the SCL pin on the sensor
+  5. Connect a jumper cable to the 21 pin on the ESP32 and then connect the other end to the SDA pin on the sensor
+  6. When completed, your ESP32 and connected sensor should look like this:
       1. [insert a picture of a single sensor connected to the ESP32] 
   7. In the Arduino IDE, select the Library Manager icon
       1. ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
