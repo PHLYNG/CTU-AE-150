@@ -28,12 +28,12 @@ After following the steps in the Command & Data Handling section of this Manual 
   7. When completed, your ESP32 and connected sensor should look like this:
      - [insert a picture of a single sensor connected to the ESP32] 
   8. In the Arduino IDE, select the Library Manager icon
-      ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
+     - ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
   9. In the search bar that appears, search for the sensor that you have connected to your ESP32
   10. From the results, choose an official library (Adafruit, Sparkfun, Arduino, etc) if available
       - If an official library is not available, feel free to search the internet for which library might be the best for your particular option
       - Otherwise, choosing the first available option should suffice
-      ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20172345.png)
+      - ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20172345.png)
   11. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select
   12. [Need to go through this process myself to get the sequencing correct]
 
