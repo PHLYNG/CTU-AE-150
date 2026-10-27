@@ -26,14 +26,14 @@ After following the steps in the Command & Data Handling section of this Manual 
   5. Connect a jumper cable to the 21 pin on the ESP32 and then connect the other end to the SDA pin on the sensor
      - If you look back at the ESP32 diagram in the CDH section, you will see that pins 21 and 22 are labeled SDA and SCL, respectively
   7. When completed, your ESP32 and connected sensor should look like this:
-      1. [insert a picture of a single sensor connected to the ESP32] 
+     - [insert a picture of a single sensor connected to the ESP32] 
   8. In the Arduino IDE, select the Library Manager icon
-      1. ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
+      ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
   9. In the search bar that appears, search for the sensor that you have connected to your ESP32
   10. From the results, choose an official library (Adafruit, Sparkfun, Arduino, etc) if available
-      1. If an official library is not available, feel free to search the internet for which library might be the best for your particular option
-      2. Otherwise, choosing the first available option should suffice
-      3. ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20172345.png)
+      - If an official library is not available, feel free to search the internet for which library might be the best for your particular option
+      - Otherwise, choosing the first available option should suffice
+      ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20172345.png)
   11. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select
   12. [Need to go through this process myself to get the sequencing correct]
 
