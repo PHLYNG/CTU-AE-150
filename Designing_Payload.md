@@ -28,3 +28,5 @@ The purpose of this manual is to give you, the user, a workflow that will build 
 This table lists out the requirements this payload must achieve. Notice that each requirement is numbered, clearly stated what must be accomplished, and why.
 
 Note that in any future and more complex payload project that you will need to list your requirements in this format.
+
+Now that the requirements have been established, let's take a look at what materials we will need to build this payload!
