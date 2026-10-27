@@ -23,4 +23,4 @@ The purpose of this manual is to give you, the user, a workflow that will build 
 
 ## 3. Baseline Requirements Table
 
-
+![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/142fdc40098bdaa03c6dfa7d9548fe55942ff183/images/user%20payload%20requirements%20matrix.png)
