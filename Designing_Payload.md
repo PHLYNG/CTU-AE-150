@@ -21,6 +21,10 @@ If you have ambitious ideas, such as multi-spectral cameras, actuated cut-down m
 
 The purpose of this manual is to give you, the user, a workflow that will build a simple yet foundational payload. It teaches you the core building blocks: power budgeting, microcontroller integration, sensor polling, and data storage that serve as the baseline architecture for any advanced scientific instrument you design in the future. Rather than attempting to do everything at once, this foundational test payload focuses on mastering the essentials: reliably surviving the flight environment, tracking time, and logging clean environmental data.
 
-## 3. Baseline Requirements Table
+## 3. Baseline Payload Requirements
 
 ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/142fdc40098bdaa03c6dfa7d9548fe55942ff183/images/user%20payload%20requirements%20matrix.png)
+
+This table lists out the requirements this payload must achieve. Notice that each requirement is numbered, clearly stated what must be accomplished, and how.
+
+Note that in any future and more complex payload project that you will need to list your requirements in this format.
