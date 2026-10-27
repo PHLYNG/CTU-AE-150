@@ -21,12 +21,13 @@ After following the steps in the Command & Data Handling section of this Manual 
 
   1. Connect a jumper cable to the 3.3V pin on the ESP32 and then connect the other end to the VCC pin on the sensor
   2. Connect a jumper cable to the GND pin on the ESP32 and then connect the other end to the GND pin on the sensor
-      1. It is good practice to use red for power and black for ground
+     - It is good practice to use red for power and black for ground
   4. Connect a jumper cable to the 22 pin on the ESP32 and then connect the other end to the SCL pin on the sensor
   5. Connect a jumper cable to the 21 pin on the ESP32 and then connect the other end to the SDA pin on the sensor
-  6. When completed, your ESP32 and connected sensor should look like this:
+     - If you look back at the ESP32 diagram in the CDH section, you will see that pins 21 and 22 are labeled SDA and SCL, respectively
+  7. When completed, your ESP32 and connected sensor should look like this:
       1. [insert a picture of a single sensor connected to the ESP32] 
-  7. In the Arduino IDE, select the Library Manager icon
+  8. In the Arduino IDE, select the Library Manager icon
       1. ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
   9. In the search bar that appears, search for the sensor that you have connected to your ESP32
   10. From the results, choose an official library (Adafruit, Sparkfun, Arduino, etc) if available
