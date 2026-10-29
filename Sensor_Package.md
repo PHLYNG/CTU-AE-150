@@ -28,17 +28,16 @@ Please note that you may need to solder pin headers to your sensors. Head over t
   5. Connect a jumper cable to the 21 pin on the ESP32 and then connect the other end to the SDA pin on the sensor
      - If you look back at the ESP32 diagram in the CDH section, you will see that pins 21 and 22 are labeled SDA and SCL, respectively
   7. When completed, your ESP32 and connected sensor should look like this:
-     - [insert a picture of a single sensor connected to the ESP32] 
+     - ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/20d9b02d544302f6e763203ecd196133eb291240/images/PXL_20261029_142621145.jpg)
   8. In the Arduino IDE, select the Library Manager icon
      - ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
   9. In the search bar that appears, search for the sensor that you have connected to your ESP32
   10. From the results, choose an official library (Adafruit, Sparkfun, Arduino, etc) if available
       - If an official library is not available, feel free to search the internet for which library might be the best for your particular option
       - Otherwise, choosing the first available option should suffice
-      - ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20172345.png)
+      - ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/20d9b02d544302f6e763203ecd196133eb291240/images/rtc%20lib%20install.png)
   11. When installing a Library package, a popup may appear saying that the Library you're trying to install requires other dependencies that are currently not installed; if that occurs, simply click "INSTALL ALL".
   12. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select
-  13. [Need to go through this process myself to get the sequencing correct]
 
 If the sensor is working properly, you will see data populating the Arduino IDE console.
 
