@@ -52,6 +52,18 @@ This is also the time to deal with any issues you may have noticed during initia
 
 This will require a lot of experimenting and trial & error. But remember! Since this is a core sensor package, all the work and troubleshooting you do here will help reduce issues you might encounter in future payloads.
 
-Once you reach a point where you are satisfied with the way the code is controlling the sensors, it is time to do some calibrating and testing!\
+## Final Layout
 
-Next section: Calibrating/Testing
+Technically, a payload could fly with the integrated circuit on a breadboard.
+
+However, one of the limitations of a solderless breadboard is that its shape is fixed and the number of permutations of how the components can be laid out on the board are quite small. What if you had a component that needed to be outside of the payload? Or pointing in a specific direction? Or had to be positioned away from another component to reduce noise?
+
+Using perfboard drastically increases the number of ways you can lay out your circuit. Of course in this payload, all of the components can remain inside the payload and don't have significant restrictions on how they can or cannot be placed.
+
+But another advantage of soldering components to perfboard is that the connections are much more reliable than a jumper cable, which can simply pop out of the pin hole with enough force.
+
+Before deciding on your final layout, now is a good time to assemble your payload structure. Knowing what your payload structure will be will help determine things like how much wire do you need to connect components together before you start soldering things together and make them permanent.
+
+In the next section, we'll discuss all the different options for payload structures!
+
+Next section: [Payload Structure](Payload_Structure.md)
