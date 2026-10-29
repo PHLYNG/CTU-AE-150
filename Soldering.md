@@ -4,14 +4,6 @@ The goal of this section is to convey soldering best practices and help users un
 
 It will be up to the user to determine what is the best way to convert any breadboard prototype to the final soldered perf board version.
 
-## Solder Quality Checks
-
-What does bad soldering look like?
-
-What does good soldering look like?
-
-You can also use a microscope to see if a soldering joint is good or bad quality.
-
 ## General Soldering Tips
 
 If you are brand new to soldering, try getting a soldering kit for practice.
@@ -25,3 +17,9 @@ There are lots and lots of tutorials on YouTube on soldering best practices. Her
 All around basics: https://www.youtube.com/watch?v=Qps9woUGkvI
 
 Alternative basics that includes links to purchase soldering equipment: https://www.youtube.com/watch?v=rK38rpUy568
+
+## Solder Quality Checks
+
+![image alt](https://github.com/PHLYNG/HAB-CINT/blob/5ec2b4d240b5fb978540ee92c3db0da1b64bd373/images/solder-joint-quality-comparison.webp)
+
+You can also use a microscope to get a much closer look at your solder joints and compare them against the infographic.
