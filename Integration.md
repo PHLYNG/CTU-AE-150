@@ -22,6 +22,8 @@ Note that all three sensors in the sensor package have the same VCC, GND, SDA, a
 
 Once you place the 3 sensors on the breadboard, you can connect each sensor's SDA pin (for example) with a jumper cable on one end into a vertical column (where the diagram says "Connected together") with the other end. By doing so, you can connect the ESP32's SDA pin (pin 21) into that same column and thus all the sensor's SDA output data will feed into a single SDA pin on the ESP32.
 
+This principle applies also for the SCL pin.
+
 Another way this concept plays out is with power and ground. The ESP32 can power the "rails" of the breadboard. By connect the ESP32's 3v3 pin to one of the rails, each sensor can then connect to the same power rail to receive power. The same goes for ground. Note that the rails on either end of the breadboard are not connected together unless explicitly connected with a jumper cable. Go ahead and try this by connecting the two ground rails together with a jumper cable. This will come in handy in a moment.
 
 ## SD Card Reader
