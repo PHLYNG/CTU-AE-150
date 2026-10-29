@@ -30,3 +30,5 @@ This table lists out the requirements this payload must achieve. Notice that eac
 Note that in any future and more complex payload project that you will need to list your requirements in this format.
 
 Now that the requirements have been established, let's take a look at what materials we will need to build this payload!
+
+Next section: [Materials](Materials.md)
