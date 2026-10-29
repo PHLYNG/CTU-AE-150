@@ -12,9 +12,9 @@
 4. [Command & Data Handling](Microcontroller.md)
 5. [Initialize Sensors](Initialize_Sensors.md)
 6. [Integration](Integration.md)
-7. [Calibration/Testing](Calibration.md)
+7. [Payload Structure](Payload_Structure.md)
 8. [Soldering](Soldering.md)
-9. Payload Structure
+9. [Calibration/Testing](Calibration.md)
 10. Flight
 11. [HAB Tracker](HAB_Tracker.md)
 12. Data Analysis
