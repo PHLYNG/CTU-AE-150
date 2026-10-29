@@ -19,6 +19,8 @@ Before getting fully underway with prototyping, a good first step is to connect 
 
 After following the steps in the Command & Data Handling section of this Manual and while the ESP32 is connected to your computer, follow these steps to test your sensors one by one. This Manual will proceed with the RTC as an example, but the steps will be the same for the other sensors.
 
+Please note that you may need to solder pin headers to your sensors. Head over to the [Soldering](Soldering.md) section for tips and tutorials.
+
   1. Connect a jumper cable to the 3.3V pin on the ESP32 and then connect the other end to the VCC pin on the sensor
   2. Connect a jumper cable to the GND pin on the ESP32 and then connect the other end to the GND pin on the sensor
      - It is good practice to use red for power and black for ground
@@ -40,3 +42,5 @@ After following the steps in the Command & Data Handling section of this Manual 
 If the sensor is working properly, you will see data populating the Arduino IDE console.
 
 In order to ensure that the data being produced is correct we must calibrate our sensors, which will be discussed in the following section.
+
+Next section: [Calibration](Calibration.md)
