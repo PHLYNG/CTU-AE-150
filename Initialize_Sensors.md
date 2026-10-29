@@ -41,3 +41,5 @@ Otherwise, proceed with the following walkthrough to initialize your sensors.
   ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/6980f473542e5f265675f468a925955494222235/images/rtc%20serial%20monitor%20correct%20baud.png)
 
 You will need to repeat this process with your remaining sensors. Once you have done so, we start building an integrated circuit and write the code that will control your sensors!
+
+Next section: [Integration](Integration.md)
