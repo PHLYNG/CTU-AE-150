@@ -21,4 +21,6 @@ This guide was created primarily for incoming freshmen engineering students at C
 
 However, it can be used by anybody and everybody that is interested in building a HAB payload for themselves. All the materials used are identified and in many cases links are provided to Amazon or other reputable suppliers for purchase.
 
-With all that said, let’s get started!
+With all that said, let’s get started and move on to the next section!
+
+Next section: [Designing a Payload](Designing_Payload.md)
