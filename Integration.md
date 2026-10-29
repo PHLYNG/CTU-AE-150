@@ -11,7 +11,9 @@ Two major advantages of using breadboards:
   1. A breadboard allows components, power distribution lines, and signal jumpers to be rearranged dynamically without desoldering or damaging delicate board pads.
   2. Prototyping on a breadboard makes early wiring errors, such as landing a jumper cable on the wrong pin or misrouting a digital bus line, completely reversible and low stakes. Mistakes can be caught and corrected immediately during pre-assembly bench testing before any permanent soldering takes place.
 
+Here is a diagram of how a breadboard works:
 
+![image alt](https://github.com/PHLYNG/HAB-CINT/blob/cbf6dc40e3856e4c5aac83eab86c16e7c659f563/images/breadboard-illustrated.adb3be7b.jpg)
 
 Note that all three sensors in the sensor package have the same VCC, GND, SDA, and SCL pins.
 
