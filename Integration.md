@@ -44,10 +44,14 @@ Note that tidiness is critical! Having jumper cables of different lengths and co
 
 One of the few things this Guide will not fully walk through is how to write the code for your integrated circuit.
 
-This is an area where one size will not fit all. Each individual user may want to see their data logged in a different way, or give more weight to certain data types over others. Even though the sensor package is the same the bugs that pop up will not be, nor will the solutions that resolve those bugs.
-
 A good place to start is to go through the installed sensor libraries and find sample code that has outputs that you like and then combine everything together.
 
-This will require a lot of experimenting and trial & error.
+This is an area where one size will not fit all. Each individual user may want to see their data logged in a different way, or give more weight to certain data types over others. Even though the sensor package is the same the bugs that pop up will not be, nor will the solutions that resolve those bugs.
+
+This is also the time to deal with any issues you may have noticed during initialization. For example, earlier in this Guide when I initialized the RTC the date and time were completely wrong.
+
+This will require a lot of experimenting and trial & error. But remember! Since this is a core sensor package, all the work and troubleshooting you do here will help reduce issues you might encounter in future payloads.
+
+Once you reach a point where you are satisfied with the way the code is controlling the sensors, it is time to do some calibrating and testing!\
 
 Next section: Calibrating/Testing
