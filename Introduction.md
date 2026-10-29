@@ -14,3 +14,11 @@ On a manageable scale, a HAB mission mirrors the complete project life cycle: or
 Most importantly, HAB payloads demand the very same disciplined systems engineering techniques used by NASA to deliver successful flight missions. Navigating regulatory mass limits, hardware integration, and thermal survival requires rigorous requirements traceability, clear interface definitions, and structured flight-readiness reviews.
 
 Beyond technical execution, ballooning serves as a bridge to the wider aerospace community. At Capitol Technology University (CTU), HAB has actively fostered inter-institutional collaboration with regional partners like the University of Maryland and Howard University. It transforms theoretical aerospace concepts into a practical, multi-disciplinary, and team driven launchpad for future engineers.
+
+## Using this Guide
+
+This guide was created primarily for incoming freshmen engineering students at Capitol Technology University. In some cases, there may be some assumptions made about the level of access users will have in terms of tools and supplies.
+
+However, it can be used by anybody and everybody that is interested in building a HAB payload for themselves. All the materials used are identified and in many cases links are provided to Amazon or other reputable suppliers for purchase.
+
+With all that said, let’s get started!
