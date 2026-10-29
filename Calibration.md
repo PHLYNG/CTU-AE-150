@@ -1,4 +1,4 @@
-# Calibration
+# Initializing Sensors
 
 Now we're getting to the exciting stuff!
 
@@ -6,9 +6,7 @@ The first step is to connect each individual sensor to the ESP32 and run sample 
 
 Also please note that you may need to solder pin headers to your sensors. Head over to the [Soldering](Soldering.md) section for tips and tutorials.
 
-Otherwise, proceed with the following walkthrough to initialize and calibrate your sensors.
-
-## Initializing Sensors
+Otherwise, proceed with the following walkthrough to initialize your sensors.
 
   1. Connect a jumper cable to the 3.3V pin on the ESP32 and then connect the other end to the VCC pin on the sensor
   2. Connect a jumper cable to the GND pin on the ESP32 and then connect the other end to the GND pin on the sensor
@@ -42,6 +40,6 @@ Otherwise, proceed with the following walkthrough to initialize and calibrate yo
   22. After making the switch, sensor output should appear in the Serial Monitor.
   ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/6980f473542e5f265675f468a925955494222235/images/rtc%20serial%20monitor%20correct%20baud.png)
 
-## Calibrate Sensors
+You will need to repeat this process with your remaining sensors. Once you have done so, we start building an integrated circuit and write the code that will control your sensors!
 
 Next section: [Integration](Integration.md)
