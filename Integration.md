@@ -44,6 +44,10 @@ Note that tidiness is critical! Having jumper cables of different lengths and co
 
 One of the few things this Guide will not fully walk through is how to write the code for your integrated circuit.
 
-This is an area where one size will not fit all. Each individual user may want to see their data logged in a different way, or give more weight to certain data types over others. Even though the sensor package is the same, the bugs that pop up will not be, nor will the solutions that resolve those bugs.
+This is an area where one size will not fit all. Each individual user may want to see their data logged in a different way, or give more weight to certain data types over others. Even though the sensor package is the same the bugs that pop up will not be, nor will the solutions that resolve those bugs.
 
-## Finalizing Layout
+A good place to start is to go through the installed sensor libraries and find sample code that has outputs that you like and then combine everything together.
+
+This will require a lot of experimenting and trial & error.
+
+Next section: Calibrating/Testing
