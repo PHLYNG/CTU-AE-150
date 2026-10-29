@@ -36,8 +36,9 @@ Please note that you may need to solder pin headers to your sensors. Head over t
       - If an official library is not available, feel free to search the internet for which library might be the best for your particular option
       - Otherwise, choosing the first available option should suffice
       - ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20172345.png)
-  11. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select
-  12. [Need to go through this process myself to get the sequencing correct]
+  11. When installing a Library package, a popup may appear saying that the Library you're trying to install requires other dependencies that are currently not installed; if that occurs, simply click "INSTALL ALL".
+  12. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select
+  13. [Need to go through this process myself to get the sequencing correct]
 
 If the sensor is working properly, you will see data populating the Arduino IDE console.
 
