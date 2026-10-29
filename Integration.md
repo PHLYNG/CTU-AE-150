@@ -16,11 +16,21 @@ Here is a diagram of how a breadboard works:
 ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/cbf6dc40e3856e4c5aac83eab86c16e7c659f563/images/breadboard-illustrated.adb3be7b.jpg)
 Image source: https://dev.blues.io/blog/blues-university-first-components-breadboard/
 
+When insert the pins of a component into the breadboard, you want the pins running horizontally (where the diagram says "Not connected together"). 
+
 Note that all three sensors in the sensor package have the same VCC, GND, SDA, and SCL pins.
+
+Once you place the 3 sensors on the breadboard, you can connect each sensor's SDA pin (for example) with a jumper cable on one end into a vertical column (where the diagram says "Connected together") with the other end. By doing so, you can connect the ESP32's SDA pin (pin 21) into that same column and thus all the sensor's SDA output data will feed into a single SDA pin on the ESP32.
+
+Another way this concept plays out is with power and ground. The ESP32 can power the "rails" of the breadboard. By connect the ESP32's 3v3 pin to one of the rails, each sensor can then connect to the same power rail to receive power. The same goes for ground. Note that the rails on either end of the breadboard are not connected together unless explicitly connected with a jumper cable. Go ahead and try this by connecting the two ground rails together with a jumper cable. This will come in handy in a moment.
 
 ## SD Card Reader
 
 Now we can finally introduce the SD Card Reader into the circuit. This component needs to be connected to the 5V pin on the ESP32 because it has current requirements that are greater than the sensors. If these requirements aren't met the SD Card Reader may not spin up when the payload is powered on, or it may drop in and out resulting in inconsistent data logging if not a total loss in data logging.
+
+You will need to connect the ESP32's VIN (5V) pin to the breadboard rail opposite to the rail that is powering the sensors. Connect the SD Card Reader's VCC pin to the 5V rail. Because this rail is connected across the breadboard as mentioned before, you can also connect the Reader's GND pin to the same rail for tidiness.
+
+The SD Card Reader, instead of SDA and SCL pins, has MISO and MOSI pins. These pins need to connect to pins 19 and 23 on the ESP32 respectively.
 
 The end result should look something like this:
 
