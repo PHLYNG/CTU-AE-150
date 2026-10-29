@@ -7,7 +7,7 @@ The sensor package for this payload are basic but they are, either altogether or
 3. [Inertial Measurement Unit - GY-521](https://a.co/d/0gLBPZdt)
 4. [SD Card Reader](https://a.co/d/002QuOu7)
 
-If all you fly in your payload was this sensor package, you would still learn a lot.
+If all you fly in your payload is this sensor package, you will still learn a lot.
 
 The Real Time Clock (RTC) and MS5611 both are a means of correlating scientific data your payload might be collecting. For example, x seconds into the flight, y data was collected. Alternatively you could say at x altitude (determined by converting pressure readings), y data was collected.
 
