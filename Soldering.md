@@ -2,7 +2,7 @@
 
 The goal of this section is to convey soldering best practices and help users understand what is good quality and bad quality soldering.
 
-It will be up to the user to determine what is the best way to convert any breadboard prototype to the final soldered perf board version.
+It will be up to the user to determine what is the best way to convert any breadboard prototype to the final soldered integrated circuit.
 
 ## General Soldering Tips
 
