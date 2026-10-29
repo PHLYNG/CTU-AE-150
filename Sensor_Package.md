@@ -35,7 +35,7 @@ Please note that you may need to solder pin headers to your sensors. Head over t
   10. From the results, choose an official library (Adafruit, Sparkfun, Arduino, etc) if available
       - If an official library is not available, feel free to search the internet for which library might be the best for your particular option
       - Otherwise, choosing the first available option should suffice
-      - ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/20d9b02d544302f6e763203ecd196133eb291240/images/rtc%20lib%20install.png)
+  ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/20d9b02d544302f6e763203ecd196133eb291240/images/rtc%20lib%20install.png)
   11. When installing a Library package, a popup may appear saying that the Library you're trying to install requires other dependencies that are currently not installed; if that occurs, simply click "INSTALL ALL".
   12. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select your newly installed Library (which should appear towards the bottom of the window), then select an item from the list. A new window will pop up that is populated with ready to run code.
   13. In this case, I chose the "timestamp" option because I want to see that the RTC can in fact output a timestamp in a readable format and also see what time the RTC thinks it is.
