@@ -51,6 +51,6 @@ Please note that you may need to solder pin headers to your sensors. Head over t
   21. After making the switch, sensor output should appear in the Serial Monitor.
       - ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/6980f473542e5f265675f468a925955494222235/images/rtc%20serial%20monitor%20correct%20baud.png)
 
-In order to ensure that the data being produced is correct we must calibrate our sensors, which will be discussed in the following section.
+We can see that the RTC can indeed output a timestamp, but it is not the correct date or time. In order to ensure that the data being produced is correct we must calibrate our sensors, which will be discussed in the following section.
 
 Next section: [Calibration](Calibration.md)
