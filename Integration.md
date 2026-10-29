@@ -14,6 +14,7 @@ Two major advantages of using breadboards:
 Here is a diagram of how a breadboard works:
 
 ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/cbf6dc40e3856e4c5aac83eab86c16e7c659f563/images/breadboard-illustrated.adb3be7b.jpg)
+Image source: https://dev.blues.io/blog/blues-university-first-components-breadboard/
 
 Note that all three sensors in the sensor package have the same VCC, GND, SDA, and SCL pins.
 
