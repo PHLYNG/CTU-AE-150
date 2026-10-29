@@ -25,5 +25,6 @@ Alternative basics that includes links to purchase soldering equipment: https://
 ## Solder Quality Checks
 
 ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/5ec2b4d240b5fb978540ee92c3db0da1b64bd373/images/solder-joint-quality-comparison.webp)
+Image source: https://www.hamradiobase.com/electronics/good-joints-vs-cold-joints/
 
 You can also use a microscope to get a much closer look at your solder joints and compare them against the infographic.
