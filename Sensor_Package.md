@@ -39,13 +39,15 @@ Please note that you may need to solder pin headers to your sensors. Head over t
   11. When installing a Library package, a popup may appear saying that the Library you're trying to install requires other dependencies that are currently not installed; if that occurs, simply click "INSTALL ALL".
   12. Click File in the top left corner of the Arduino IDE, then hover over Examples from the drop down menu, then select your newly installed Library (which should appear towards the bottom of the window), then select an item from the list. A new window will pop up that is populated with ready to run code.
       - ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/2d9f36ecec5b79fd75be9da8187411b862420b92/images/rtc%20example%20code%20select.png)
-  13. To upload code to your ESP32 first click the Verify button, which appears as a check mark, in the top left corner of the window. This ensures that the code runs without any errors. Then click the Upload button, which is directly to the right of the Verify button and appears as an arrow pointing to the right.
-  14. To see the output of the sensor, you must open the Serial Monitor. You can use the keyboard shortcut of CTRL+SHIFT+M, or click on the tools button at the top left of the window, and then click Serial Monitor from the drop down menu.
-  15. You will most likely see random symbols or nothing at all. This is because the Serial Monitor defaults to read at 9600 baud.
+  13. At this point, connect your ESP32 to your computer using a USB-C cable. You should see a red power indicator light activate for both the ESP32 and the RTC.
+  14. To upload code to your ESP32 first click the Verify button, which appears as a check mark, in the top left corner of the window. This ensures that the code runs without any errors.
+  15. Once that process is complete, next click the Upload button, which is directly to the right of the Verify button and appears as an arrow pointing to the right.
+  16. To see the output of the sensor, you must open the Serial Monitor. You can use the keyboard shortcut of CTRL+SHIFT+M, or click on the Tools button at the top left of the window, and then click Serial Monitor from the drop down menu.
+  17. You will most likely see random symbols or nothing at all. This is because the Serial Monitor defaults to read at 9600 baud.
       - ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/6980f473542e5f265675f468a925955494222235/images/rtc%20serial%20monitor%209600%20baud.png)
-  17. Note that in the code, a baud setting is entered. Therefore, the Serial Monitor setting needs to match this value.
-  18. Select the baud setting menu and select the value that matches the value in the code. In this case, it's 57600 baud.
-  19. After making the switch, sensor output should appear in the Serial Monitor.
+  18. Note that in the code, a baud setting is entered. Therefore, the Serial Monitor setting needs to match this value.
+  19. Select the baud setting menu and select the value that matches the value in the code. In this case, it's 57600 baud.
+  20. After making the switch, sensor output should appear in the Serial Monitor.
       - ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/6980f473542e5f265675f468a925955494222235/images/rtc%20serial%20monitor%20correct%20baud.png)
 
 In order to ensure that the data being produced is correct we must calibrate our sensors, which will be discussed in the following section.
