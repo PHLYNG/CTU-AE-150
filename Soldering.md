@@ -6,7 +6,11 @@ It will be up to the user to determine what is the best way to convert any bread
 
 ## General Soldering Tips
 
-If you are brand new to soldering, try getting a soldering kit for practice.
+If you are brand new to soldering, try getting a soldering practice kit. Sample kits linked here:
+
+[Kit 1](https://a.co/d/0cIugqED)
+
+[Kit 2](https://a.co/d/0aLld6sL)
 
 If you aren't brand new but maybe a little rusty, try soldering some basic components that you have a lot of, like a resistor and/or LED light before jumping straight into soldering your components.
 
