@@ -2,11 +2,13 @@
 
 Now we're getting to the exciting stuff!
 
-Before getting fully underway with prototyping, the first step is to connect each individual sensor to the ESP32 and run sample code to ensure that your sensors are functioning.
+The first step is to connect each individual sensor to the ESP32 and run sample code to ensure that your sensors are functioning. Please note that for now, we will skip the SD Card Reader in this section. In order to test that device, we will need the sensors working first and then see if the SD Card Reader successfully logs the data that they output.
 
-After following the steps in the Command & Data Handling section of this Manual and while the ESP32 is connected to your computer, follow these steps to test your sensors one by one. This Manual will proceed with the RTC as an example, but the steps will be the same for the other sensors.
+Also please note that you may need to solder pin headers to your sensors. Head over to the [Soldering](Soldering.md) section for tips and tutorials.
 
-Please note that you may need to solder pin headers to your sensors. Head over to the [Soldering](Soldering.md) section for tips and tutorials.
+Otherwise, proceed with the following walkthrough to initialize and calibrate your sensors.
+
+## Initializing Sensors
 
   1. Connect a jumper cable to the 3.3V pin on the ESP32 and then connect the other end to the VCC pin on the sensor
   2. Connect a jumper cable to the GND pin on the ESP32 and then connect the other end to the GND pin on the sensor
@@ -40,4 +42,6 @@ Please note that you may need to solder pin headers to your sensors. Head over t
   22. After making the switch, sensor output should appear in the Serial Monitor.
   ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/6980f473542e5f265675f468a925955494222235/images/rtc%20serial%20monitor%20correct%20baud.png)
 
-We can see that the RTC can indeed output a timestamp, but it is not the correct date or time. In order to ensure that the data being produced is correct we must calibrate our sensors, which will be discussed in the following section.
+## Calibrate Sensors
+
+Next section: [Integration](Integration.md)
