@@ -31,7 +31,8 @@ Please note that you may need to solder pin headers to your sensors. Head over t
   ![image alt](https://github.com/PHLYNG/HAB-CINT/blob/20d9b02d544302f6e763203ecd196133eb291240/images/PXL_20261029_142621145.jpg)
   8. In the Arduino IDE, select the Library Manager icon
 
-  ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
+   ![image alt](https://github.com/PHLYNG/CTU-AE-150/blob/1f0a11a02f1457941f0e2fc2d92e6f2c6467ca44/images/Screenshot%202026-10-23%20173251.png)
+   
   10. In the search bar that appears, search for the sensor that you have connected to your ESP32
   11. From the results, choose an official library (Adafruit, Sparkfun, Arduino, etc) if available
       - If an official library is not available, feel free to search the internet for which library might be the best for your particular option
