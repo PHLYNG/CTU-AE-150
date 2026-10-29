@@ -14,6 +14,7 @@
 6. [Integration](Integration.md)
 7. [Calibration/Testing](Calibration.md)
 8. [Soldering](Soldering.md)
-9. Flight
-10. [HAB Tracker](HAB_Tracker.md)
-11. Data Analysis
+9. Payload Structure
+10. Flight
+11. [HAB Tracker](HAB_Tracker.md)
+12. Data Analysis
