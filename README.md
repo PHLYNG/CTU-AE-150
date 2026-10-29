@@ -10,7 +10,7 @@
 2. [Designing a Payload](Designing_Payload.md)
 3. [Materials](Materials.md)
 4. [Command & Data Handling](Microcontroller.md)
-5. [Initialize Sensors]
+5. [Initialize Sensors](Initialize_Sensors.md)
 6. [Integration](Integration.md)
 7. [Calibration/Testing](Calibration.md)
 8. [Soldering](Soldering.md)
