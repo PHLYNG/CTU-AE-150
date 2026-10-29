@@ -13,7 +13,7 @@
 6. [Sensor Package](Sensor_Package.md)
 7. Soldering
 8. Calibration
-9. Integration (Prototyping)
+9. Integration
 10. Testing
 11. Flight
 12. [HAB Tracker](HAB_Tracker.md)
