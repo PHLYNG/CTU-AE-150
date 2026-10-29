@@ -53,6 +53,6 @@ Please note that you may need to solder pin headers to your sensors. Head over t
 
 We can see that the RTC can indeed output a timestamp, but it is not the correct date or time. In order to ensure that the data being produced is correct we must calibrate our sensors, which will be discussed in the following section.
 
-You will need to repeat this process with your remaining sensors. Once you have done so, we can check to make sure that the sensor outputs are correct and if not, make the necessary adjustments. This will be discussed in further detail in the next section!
+You will need to repeat this process with your remaining sensors. You can skip the SD Card Reader for now - that will require a different setup and check. Once you have done so, we can check to make sure that the sensor outputs are correct and if not, make the necessary adjustments. This will be discussed in further detail in the next section!
 
 Next section: [Calibration](Calibration.md)
